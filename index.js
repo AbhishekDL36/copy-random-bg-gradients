@@ -21,3 +21,16 @@ let gradient = `linear-gradient( to right, ${clr1}, ${clr2})`
 
     input.value= gradient
 })
+
+let copyBtn= document.querySelector(".btn2")
+
+copyBtn.addEventListener("click", () => {
+    const code = input.value;
+
+    // Use the Clipboard API to copy the gradient code
+    navigator.clipboard.writeText(code).then(() => {
+        alert(`Gradient code copied: ${code}`);
+    }).catch(err => {
+        console.error('Error copying text: ', err);
+    });
+});
