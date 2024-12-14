@@ -11,4 +11,5 @@ btn.addEventListener("click",()=>{
     }
 
     div.style.background= clr
+    input.value= clr
 })
