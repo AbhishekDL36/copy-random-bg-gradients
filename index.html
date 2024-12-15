@@ -13,7 +13,7 @@
 
         div{
             height: 100vh;
-          
+         
         }
         button{
 margin: 0 auto;
@@ -34,6 +34,12 @@ position: absolute;
 top: 66px;
 left: 1000px;
        }
+       select{
+        position: absolute;
+        top: 70px;
+        padding: 10px;
+        left: 1100px;
+       }
     </style>
 </head>
 <body>
@@ -41,7 +47,13 @@ left: 1000px;
     <button>click to change bg</button>
   <input type="text" readonly placeholder="color code">
         <button class="btn2">📋</button>
-  
+  <select name="count" id="" >
+    <option value="" disabled selected>Select the Number of Colors</option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+  </select>
 </div>
     <script src="index.js"></script>
 </body>
