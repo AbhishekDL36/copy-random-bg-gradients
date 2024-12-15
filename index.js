@@ -42,7 +42,9 @@ btn.addEventListener("click",()=>{
     for(let i=0; i<6;i++){
         clr4 += color[Math.floor(Math.random()*16)]
     }
-
+if(count==0){
+    alert("select number of colors")
+}
     if(count==1){
 
         div.style.background= clr1;
@@ -83,12 +85,16 @@ let copyBtn= document.querySelector(".btn2")
 
 copyBtn.addEventListener("click", () => {
     const code = input.value;
-
+if(code.trim()===""){
+    alert("No code generated")
+}
+    else{
+        navigator.clipboard.writeText(code).then(() => {
+            alert(`Gradient code copied: ${code}`);
+        }).catch(err => {
+            console.error('Error copying text: ', err);
+        });
+    }
     
-    navigator.clipboard.writeText(code).then(() => {
-        alert(`Gradient code copied: ${code}`);
-    }).catch(err => {
-        console.error('Error copying text: ', err);
-    });
 });
 
